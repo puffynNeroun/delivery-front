@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 const Wealcome = () => {
   return (
     <section>
-      <div className="container mt-[36px] h-[898px] flex">
-        <div className="mt-[224px]">
-          <div className="w-[499px]">
-            <p className="font-bold text-5xl text-[#E9E9E9]">
+      <div className="container mt-[36px] h-[898px] grid grid-cols-2">
+        <div className="flex flex-col">
+          <div className="w-[499px] mt-[224px]">
+            <h1 className="font-bold text-5xl text-[#E9E9E9]">
               Добро пожаловать
-            </p>
-            <p className="text-[#F5920B] font-bold text-5xl">в Sushiritto!</p>
+            </h1>
+            <h2 className="text-[#F5920B] font-bold text-5xl">в Sushiritto!</h2>
           </div>
           <div className="w-[672px]">
             <p className="text-[#ADADAD] font-bold text-lg">
@@ -24,37 +24,41 @@ const Wealcome = () => {
               непосредственно перед самой подачей. Мы любим свою работу и рады
               для вас стараться
             </p>
-            <button className="text-[#171717] font-bold text-[20px] bg-[#F5920B] py-[30px] px-[71px] mt-[44px]">
-              Сделать заказ
-            </button>
           </div>
-          <div className="mt-[197px]">
-            <Link
-              to="/"
-              className="text-[#F5920B] font-bold text-[20px] border-[1px] py-[55px] px-[36px] border-[#F5920B]"
-            >
-              Суши
-            </Link>
-            <Link
-              to="/"
-              className="text-[#F5920B] font-bold text-[20px] border-[1px] py-[55px] px-[36px] border-[#F5920B]"
-            >
-              Пицца
-            </Link>
-            <Link
-              to="/"
-              className="text-[#F5920B] font-bold text-[20px] border-[1px] py-[55px] px-[36px] border-[#F5920B]"
-            >
-              WOK
-            </Link>
-          </div>
+          <button className="w-[307px] text-[#171717] font-bold text-[20px] bg-[#F5920B] py-[31px] px-[76px] mt-[44px]">
+            Сделать заказ
+          </button>
+          <ul className="flex mt-auto">
+            <li>
+              <Link
+                to="/"
+                className="inline-block text-[#F5920B] font-bold text-[20px] border-[1px] py-[55px] px-[36px] border-[#F5920B]"
+              >
+                Суши
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/"
+                className="inline-block text-[#F5920B] font-bold text-[20px] border-[1px] py-[55px] px-[36px] border-[#F5920B]"
+              >
+                Пицца
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/"
+                className="inline-block text-[#F5920B] font-bold text-[20px] border-[1px] py-[55px] px-[36px] border-[#F5920B]"
+              >
+                WOK
+              </Link>
+            </li>
+          </ul>
         </div>
 
-        <img
-          src="../../public/wealcome.jpg"
-          alt=""
-          className="w-[637px] ml-[227px]"
-        />
+        <div className="w-[637px] ml-auto">
+          <img src="../../public/wealcome.jpg" alt="" />
+        </div>
       </div>
     </section>
   );
