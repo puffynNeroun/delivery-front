@@ -1,71 +1,47 @@
-import { Link } from "react-router-dom";
-
 const Header = () => {
   return (
-    <div className="text-[#E9E9E9] container mt-[44px] h-[60px] flex justify-between items-center">
+    <header className="text-[#E9E9E9] container mt-[44px] h-[60px] flex justify-between items-center">
       <div>
-        <Link to="/" className="flex">
+        <a className="flex">
           <img
-            src="../../public/logo.svg"
+            src="../../public/logo2.svg"
             alt=""
-            className="inline-block w-[64px] h-[61px]"
+            className="inline-block w-[227px] h-[61px]"
           />
-          <div>
-            <p className="text-base relative">Пермь</p>
-            <p className="text-[32px] absolute top-[54px]">Sushiritto</p>
-          </div>
-        </Link>
+        </a>
       </div>
 
       <nav>
         <ul className="flex  space-x-2.5 font-bold text-lg ">
           <li>
-            <Link
-              to="/"
-              className=" hover:underline underline-offset-8 decoration-amber-600 "
-            >
+            <a className=" hover:underline underline-offset-8 decoration-amber-600 ">
               Главная
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/"
-              className=" hover:underline underline-offset-8 decoration-amber-600 "
-            >
+            <a className=" hover:underline underline-offset-8 decoration-amber-600 ">
               Каталог
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/"
-              className=" hover:underline underline-offset-8 decoration-amber-600 "
-            >
+            <a className=" hover:underline underline-offset-8 decoration-amber-600 ">
               Доставка
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/"
-              className=" hover:underline underline-offset-8 decoration-amber-600 "
-            >
+            <a className=" hover:underline underline-offset-8 decoration-amber-600 ">
               Акции
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/"
-              className="  hover:underline underline-offset-8 decoration-amber-600 "
-            >
+            <a className="  hover:underline underline-offset-8 decoration-amber-600 ">
               О нас
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/"
-              className="  hover:underline underline-offset-8 decoration-amber-600 "
-            >
+            <a className="  hover:underline underline-offset-8 decoration-amber-600 ">
               Контакты
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>
@@ -78,7 +54,7 @@ const Header = () => {
           className="p-2 bg-amber-600 rounded-full hover:bg-amber-700 transition-all"
         />
       </div>
-    </div>
+    </header>
   );
 };
 

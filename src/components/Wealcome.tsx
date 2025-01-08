@@ -19,11 +19,11 @@ const Wealcome = () => {
               <span className="text-[#F5920B]">пиццу</span>
             </p>
             <br />
-            <p className="text-[#ADADAD] font-bold text-lg">
+            <span className="text-[#ADADAD] font-bold text-lg">
               Мы используем самые свежие продукты, каждая порция готовится
               непосредственно перед самой подачей. Мы любим свою работу и рады
               для вас стараться
-            </p>
+            </span>
           </div>
           <button className="w-[307px] text-[#171717] font-bold text-[20px] bg-[#F5920B] py-[31px] px-[76px] mt-[44px]">
             Сделать заказ
