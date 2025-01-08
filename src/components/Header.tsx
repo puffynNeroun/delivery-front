@@ -14,32 +14,32 @@ const Header = () => {
       </a>
       <ul className="space-x-2.5 font-bold text-lg hidden xl:flex">
         <li>
-          <a className=" hover:underline underline-offset-8 decoration-amber-600 ">
+          <a className=" hover:underline underline-offset-8 decoration-amber-600 cursor-pointer ">
             Главная
           </a>
         </li>
         <li>
-          <a className=" hover:underline underline-offset-8 decoration-amber-600 ">
+          <a className=" hover:underline underline-offset-8 decoration-amber-600 cursor-pointer">
             Каталог
           </a>
         </li>
         <li>
-          <a className=" hover:underline underline-offset-8 decoration-amber-600 ">
+          <a className=" hover:underline underline-offset-8 decoration-amber-600 cursor-pointer">
             Доставка
           </a>
         </li>
         <li>
-          <a className=" hover:underline underline-offset-8 decoration-amber-600 ">
+          <a className=" hover:underline underline-offset-8 decoration-amber-600 cursor-pointer">
             Акции
           </a>
         </li>
         <li>
-          <a className="  hover:underline underline-offset-8 decoration-amber-600 ">
+          <a className="  hover:underline underline-offset-8 decoration-amber-600 cursor-pointer">
             О нас
           </a>
         </li>
         <li>
-          <a className="  hover:underline underline-offset-8 decoration-amber-600 ">
+          <a className="  hover:underline underline-offset-8 decoration-amber-600 cursor-pointer">
             Контакты
           </a>
         </li>
@@ -49,7 +49,7 @@ const Header = () => {
         <img
           src="../../public/busket.svg"
           alt="busket"
-          className="p-2 bg-amber-600 rounded-full hover:bg-amber-700 transition-all"
+          className="p-2 bg-amber-600 rounded-full hover:bg-amber-700 transition-all cursor-pointer"
         />
       </div>
       <RxHamburgerMenu

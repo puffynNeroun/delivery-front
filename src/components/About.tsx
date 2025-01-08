@@ -1,7 +1,7 @@
 const About = () => {
   return (
-    <section className="container">
-      <div className="grid grid-cols-2 container mt-24 ">
+    <section className="container mt-24">
+      <div className="grid grid-cols-2   ">
         <div className="flex flex-col">
           <p className="text-[#E9E9E9] font-bold text-5xl">
             О<span className="text-[#F5920B] font-bold text-5xl"> НАС</span>

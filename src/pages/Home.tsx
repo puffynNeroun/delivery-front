@@ -1,5 +1,7 @@
 import About from "../components/About";
+import Delivery from "../components/Delivery";
 import Popular from "../components/Popular";
+
 import Wealcome from "../components/Wealcome";
 
 const Home = () => {
@@ -8,6 +10,7 @@ const Home = () => {
       <Wealcome />
       <Popular />
       <About />
+      <Delivery />
     </>
   );
 };
