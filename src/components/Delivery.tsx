@@ -6,7 +6,7 @@ const Delivery = () => {
       <div className="grid grid-cols-3">
         <div>
           <h2 className="text-[#F5920B] font-bold text-5xl">ДОСТАВКА</h2>
-          <div className="bg-[#E17D18] mt-[76px] w-[426px] p-6">
+          <div className="bg-[#E17D18] mt-[65px] w-[426px] p-6">
             <h3 className="text-[#171717] font-extrabold text-xl w-[170px] ">
               График работы ежедневно:
             </h3>
@@ -35,11 +35,11 @@ const Delivery = () => {
           </div>
         </div>
 
-        <div className="mx-24 w-[474px]">
+        <div className="ml-16 w-[474px]">
           <img src="../../public/pizza.png" alt="" className=" h-[470px]" />
         </div>
 
-        <div className="ml-[120px]">
+        <div className="ml-[110px]">
           <p className="text-[#E17D18] font-bold text-xl mt-[77px]">
             Сделайте заказ
           </p>
@@ -47,10 +47,10 @@ const Delivery = () => {
             Выберите понравившийся товар <br />и оформите заказ за несколько
             простых шагов.
           </span>
-          <p className="text-[#E9E9E9] font-bold text-xl mt-[40px]">
+          <p className="text-[#E9E9E9] font-bold text-xl mt-[40px] ml-6">
             Ожидание звонка
           </p>
-          <span className="inline-block text-[#ADADAD] text-lg">
+          <span className="inline-block text-[#ADADAD] text-lg ml-6">
             После оформления заказа,
             <br /> с Вами свяжется оператор
           </span>

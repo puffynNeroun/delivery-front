@@ -24,7 +24,7 @@ const Discounts = () => {
           </button>
         </div>
 
-        <div>
+        <div className="flex justify-center">
           <img src="../../public/discount.jpeg" alt="" />
         </div>
       </div>

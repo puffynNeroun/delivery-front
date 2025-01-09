@@ -12,7 +12,7 @@ const Header = () => {
           className="inline-block w-[227px] h-[61px]"
         />
       </a>
-      <ul className="space-x-2.5 font-bold text-lg hidden xl:flex">
+      <ul className="space-x-2.5 font-bold text-lg hidden md:flex">
         <li>
           <a className=" hover:underline underline-offset-8 decoration-amber-600 cursor-pointer ">
             Главная
@@ -44,7 +44,7 @@ const Header = () => {
           </a>
         </li>
       </ul>
-      <div className="hidden md:flex items-center">
+      <div className="hidden xl:flex items-center">
         <p className="font-bold text-lg mr-10 "> +7 (963) 012-14-69</p>
         <img
           src="../../public/busket.svg"
@@ -53,7 +53,7 @@ const Header = () => {
         />
       </div>
       <RxHamburgerMenu
-        className="xl:hidden block text-3xl cursor-pointer"
+        className="md:hidden block text-3xl cursor-pointer"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       />
       <div

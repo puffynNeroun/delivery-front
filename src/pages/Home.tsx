@@ -1,4 +1,5 @@
 import About from "../components/About";
+import Contact from "../components/Contact";
 import Delivery from "../components/Delivery";
 import Discounts from "../components/Discounts";
 import Popular from "../components/Popular";
@@ -13,6 +14,7 @@ const Home = () => {
       <About />
       <Delivery />
       <Discounts />
+      <Contact />
     </>
   );
 };
