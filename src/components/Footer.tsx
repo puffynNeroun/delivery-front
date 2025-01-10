@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <footer className="container mt-24 h-[172px]">
-      <div className="grid grid-cols-2 ">
-        <div className="flex flex-col">
+    <footer className="container mt-24 h-[172px] sm:mt-12">
+      <div className="grid grid-cols-2 sm:grid-cols-1">
+        <div className="flex flex-col sm:order-2 sm:mt-5">
           <a>
             <img
               src="../../public/logo2.svg"
@@ -15,8 +15,8 @@ const Footer = () => {
             sales and marketing solution for SMBs
           </span>
         </div>
-        <div className="flex flex-col justify-center justify-self-end ">
-          <ul className="flex  justify-end space-x-9 ">
+        <div className="flex flex-col justify-center justify-self-end sm:justify-self-start sm:order-1 ">
+          <ul className="flex  sm:justify-start justify-end space-x-9 ">
             <li>
               <a href="">
                 <img src="../../public/vk.svg" alt="vk_icon" />

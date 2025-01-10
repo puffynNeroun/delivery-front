@@ -12,7 +12,7 @@ const Header = () => {
           className="inline-block w-[227px] h-[61px]"
         />
       </a>
-      <ul className="space-x-2.5 font-bold text-lg hidden md:flex">
+      <ul className="space-x-2.5 font-bold text-lg sm:hidden flex">
         <li>
           <a className=" hover:underline underline-offset-8 decoration-amber-600 cursor-pointer ">
             Главная
@@ -44,16 +44,16 @@ const Header = () => {
           </a>
         </li>
       </ul>
-      <div className="hidden xl:flex items-center">
-        <p className="font-bold text-lg mr-10 "> +7 (963) 012-14-69</p>
+      <div className=" flex items-center">
+        <p className="font-bold text-lg mr-10 md:hidden"> +7 (963) 012-14-69</p>
         <img
           src="../../public/busket.svg"
           alt="busket"
-          className="p-2 bg-amber-600 rounded-full hover:bg-amber-700 transition-all cursor-pointer"
+          className="p-2 bg-amber-600 rounded-full hover:bg-amber-700 transition-all cursor-pointer sm:hidden"
         />
       </div>
       <RxHamburgerMenu
-        className="md:hidden block text-3xl cursor-pointer"
+        className="hidden sm:block text-3xl cursor-pointer"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       />
       <div
