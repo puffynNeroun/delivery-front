@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="text-[#E9E9E9] container mt-[44px] h-[60px] flex justify-between">
+    <div className="text-[#E9E9E9] container mt-[44px] h-[60px] flex justify-between ">
       <div className="flex">
         <Link to="/">
           <img
@@ -57,7 +57,7 @@ const Header = () => {
       </div>
 
       <div className="flex items-center">
-        <p className="font-bold text-lg mr-11"> +7 (963) 012-14-69</p>
+        <p className="font-bold text-lg mr-11"> +7 (963) 012-14-69</p>
         <img
           src="../../public/busket.svg"
           alt="busket"
