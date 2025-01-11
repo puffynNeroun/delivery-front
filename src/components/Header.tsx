@@ -12,48 +12,48 @@ const Header = () => {
           className="inline-block w-[227px] h-[61px]"
         />
       </a>
-      <ul className="space-x-2.5 font-bold text-lg hidden xl:flex">
+      <ul className="space-x-2.5 font-bold text-lg hidden md:flex">
         <li>
-          <a className=" hover:underline underline-offset-8 decoration-amber-600 ">
+          <a className=" hover:underline underline-offset-8 decoration-amber-600 cursor-pointer ">
             Главная
           </a>
         </li>
         <li>
-          <a className=" hover:underline underline-offset-8 decoration-amber-600 ">
+          <a className=" hover:underline underline-offset-8 decoration-amber-600 cursor-pointer">
             Каталог
           </a>
         </li>
         <li>
-          <a className=" hover:underline underline-offset-8 decoration-amber-600 ">
+          <a className=" hover:underline underline-offset-8 decoration-amber-600 cursor-pointer">
             Доставка
           </a>
         </li>
         <li>
-          <a className=" hover:underline underline-offset-8 decoration-amber-600 ">
+          <a className=" hover:underline underline-offset-8 decoration-amber-600 cursor-pointer">
             Акции
           </a>
         </li>
         <li>
-          <a className="  hover:underline underline-offset-8 decoration-amber-600 ">
+          <a className="  hover:underline underline-offset-8 decoration-amber-600 cursor-pointer">
             О нас
           </a>
         </li>
         <li>
-          <a className="  hover:underline underline-offset-8 decoration-amber-600 ">
+          <a className="  hover:underline underline-offset-8 decoration-amber-600 cursor-pointer">
             Контакты
           </a>
         </li>
       </ul>
-      <div className="hidden md:flex items-center">
+      <div className="hidden xl:flex items-center">
         <p className="font-bold text-lg mr-10 "> +7 (963) 012-14-69</p>
         <img
           src="../../public/busket.svg"
           alt="busket"
-          className="p-2 bg-amber-600 rounded-full hover:bg-amber-700 transition-all"
+          className="p-2 bg-amber-600 rounded-full hover:bg-amber-700 transition-all cursor-pointer"
         />
       </div>
       <RxHamburgerMenu
-        className="xl:hidden block text-3xl cursor-pointer"
+        className="md:hidden block text-3xl cursor-pointer"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       />
       <div
