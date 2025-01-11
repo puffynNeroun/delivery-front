@@ -3,12 +3,14 @@ const Popular = () => {
   // const swiperRef = useRef(null);
   return (
     <section className="container">
-      <div className="mt-24">
-        <h2 className="text-[#F5920B] font-bold text-5xl">ПОПУЛЯРНЫЕ</h2>
-        <p className="text-[#E9E9E9] font-bold text-5xl">БЛЮДА</p>
+      <div className="mt-24 md:mt-12 md:flex ">
+        <h2 className="text-[#F5920B] font-bold text-5xl md:text-3xl md:mr-2">
+          ПОПУЛЯРНЫЕ
+        </h2>
+        <p className="text-[#E9E9E9] font-bold text-5xl md:text-3xl">БЛЮДА</p>
       </div>
-      <div className="flex justify-between items-end">
-        <ul className="flex mt-4 gap-6">
+      <div className="flex justify-between items-end ">
+        <ul className="flex mt-4 gap-6 md:flex-wrap sm:justify-center">
           <li>
             <a className="inline-block text-[#F5920B] text-[14px] border-[1px] py-[12px] px-[34px] border-[#F5920B]">
               Роллы
@@ -45,15 +47,15 @@ const Popular = () => {
             </a>
           </li>
         </ul>
-        <div className="flex gap-8">
+        <div className="flex gap-8 md:hidden">
           <div
             // onClick={() => swiperRef.current?.slidePrev()}
             className="w-20 h-20 bg-amber-600 rounded-full hover:bg-amber-700 transition-all items-center justify-center flex"
           >
-            <img src="../../public/left.svg" alt="busket" />
+            <img src="../../public/left.svg" alt="" />
           </div>
           <div className=" w-20 h-20 items-center justify-center flex bg-amber-600 rounded-full hover:bg-amber-700 transition-all">
-            <img src="../../public/right.svg" alt="busket" />
+            <img src="../../public/right.svg" alt="" />
           </div>
         </div>
       </div>

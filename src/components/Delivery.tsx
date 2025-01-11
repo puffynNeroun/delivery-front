@@ -2,11 +2,13 @@ import { SlArrowDown } from "react-icons/sl";
 
 const Delivery = () => {
   return (
-    <section className="container mt-24 h-[528px]">
-      <div className="grid grid-cols-3">
-        <div>
-          <h2 className="text-[#F5920B] font-bold text-5xl">ДОСТАВКА</h2>
-          <div className="bg-[#E17D18] mt-[65px] w-[426px] p-6">
+    <section className="container ">
+      <div className="grid grid-cols-3 md:grid-cols-1 lg:grid-cols-2  mt-24 h-[528px] md:h-auto md:mt-10">
+        <div className="md:mt-2">
+          <h2 className="text-[#F5920B] font-bold text-5xl md:text-3xl">
+            ДОСТАВКА
+          </h2>
+          <div className="bg-[#E17D18] mt-[65px] w-[426px] p-6 md:w-auto md:mt-8">
             <h3 className="text-[#171717] font-extrabold text-xl w-[170px] ">
               График работы ежедневно:
             </h3>
@@ -28,6 +30,7 @@ const Delivery = () => {
               <span className=" font-bold text-sm inline-block">
                 1. По Кондратово бесплатно доставляем от 500 руб.
               </span>
+              <br />
               <span className=" font-bold text-sm inline-block">
                 2. В город и иные отдаленные пункты, уточняйте у оператора.
               </span>
@@ -35,27 +38,27 @@ const Delivery = () => {
           </div>
         </div>
 
-        <div className="ml-16 w-[474px]">
+        <div className="ml-16 w-[474px] md:hidden flex ">
           <img src="../../public/pizza.png" alt="" className=" h-[470px]" />
         </div>
 
-        <div className="ml-[110px]">
+        <div className="ml-[110px] md:hidden lg:hidden">
           <p className="text-[#E17D18] font-bold text-xl mt-[77px]">
-            Сделайте заказ
+            СДЕЛАЙТЕ ЗАКАЗ
           </p>
           <span className="inline-block text-[#ADADAD] text-lg w-[428]">
             Выберите понравившийся товар <br />и оформите заказ за несколько
             простых шагов.
           </span>
           <p className="text-[#E9E9E9] font-bold text-xl mt-[40px] ml-6">
-            Ожидание звонка
+            ОЖИДАНИЕ ЗВОНКА
           </p>
           <span className="inline-block text-[#ADADAD] text-lg ml-6">
             После оформления заказа,
             <br /> с Вами свяжется оператор
           </span>
           <p className="text-[#E9E9E9] font-bold text-xl mt-[35px]">
-            заказ уже в пути
+            ЗАКАЗ УЖЕ В ПУТИ
           </p>
           <span className="inline-block text-[#ADADAD] text-lg">
             Когда мы утвердили заказ, мы <br />
