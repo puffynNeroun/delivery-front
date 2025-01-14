@@ -8,8 +8,4 @@
   }
 }
 
-@layer components {
-  .container {
-    @apply max-w-[1536px] mx-auto;
-  }
-}
+
