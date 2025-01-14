@@ -9,7 +9,7 @@ const Header = () => {
         <img
           src="../../public/logo2.svg"
           alt="logo"
-          className="inline-block w-[227px] h-[61px]"
+          className="inline-block w-[227px] h-[61px] "
         />
       </a>
       <ul className="space-x-2.5 font-bold text-lg sm:hidden flex">
