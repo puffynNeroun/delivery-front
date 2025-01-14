@@ -5,6 +5,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <header className="text-[#E9E9E9] container pt-11 flex justify-between items-center">
+      <div></div>
       <a>
         <img
           src="../../public/logo2.svg"
