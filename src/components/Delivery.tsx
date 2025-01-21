@@ -2,28 +2,30 @@ import { SlArrowDown } from "react-icons/sl";
 
 const Delivery = () => {
   return (
-    <section className="container ">
-      <div className="grid grid-cols-3 md:grid-cols-1 lg:grid-cols-2  mt-24 h-[528px] md:h-auto md:mt-10">
-        <div className="md:mt-2">
-          <h2 className="text-[#F5920B] font-bold text-5xl md:text-3xl">
+    <section className="lg:pt-24 pt-10">
+      <div className="grid xl:grid-cols-3 lg:grid-cols-2   container  items-center">
+        <div className="">
+          <h2 className="text-[#F5920B] font-bold text-xl sm:text-3xl lg:text-5xl ">
             ДОСТАВКА
           </h2>
-          <div className="bg-[#E17D18] mt-[65px] w-[426px] p-6 md:w-auto md:mt-8">
-            <h3 className="text-[#171717] font-extrabold text-xl w-[170px] ">
-              График работы ежедневно:
+          <div className="bg-[#E17D18] mt-3 lg:mt-12 p-6 sm:w-full">
+            <h3 className="text-[#171717] font-extrabold md:text-xl ">
+              График работы <br />
+              ежедневно:
             </h3>
-            <span className=" text-lg font-normal text-[#242424] mt-[9px] inline-block">
+            <span className=" md:text-lg font-normal text-[#242424] mt-[9px] inline-block">
               с 10:00 до 23:00
             </span>
-            <div className="text-black mt-[10px]">
-              <p className=" flex font-bold text-sm w-[190px] items-center">
+            <div className="text-black mt-2">
+              <p className=" flex font-bold text-sm items-center">
                 <SlArrowDown className="mr-1" />
                 Самовызов, по адресу:
               </p>
-              <span className=" flex font-bold text-sm w-[190px]">
-                д. Кондратово, ул. Камская 1Б
+              <span className=" flex font-bold text-sm ">
+                д. Кондратово,
+                <br /> ул. Камская 1Б
               </span>
-              <p className=" flex font-bold text-sm w-[190px] mt-[8px] items-center">
+              <p className=" flex font-bold text-sm mt-[8px] items-center">
                 <SlArrowDown className="mr-1" />
                 Доставка:
               </p>
@@ -38,29 +40,32 @@ const Delivery = () => {
           </div>
         </div>
 
-        <div className="ml-16 w-[474px] md:hidden flex ">
-          <img src="../../public/pizza.png" alt="" className=" h-[470px]" />
+        <div
+          className="lg:w-96 w-80 h-80 hidden lg:block lg:justify-self-end
+        "
+        >
+          <img src="../../public/pizza.png" alt="" className=" " />
         </div>
 
-        <div className="ml-[110px] md:hidden lg:hidden">
-          <p className="text-[#E17D18] font-bold text-xl mt-[77px]">
+        <div className="lg:justify-self-end hidden xl:block">
+          <p className="text-[#E17D18] font-bold 2xl:text-xl pt-16 text-lg">
             СДЕЛАЙТЕ ЗАКАЗ
           </p>
-          <span className="inline-block text-[#ADADAD] text-lg w-[428]">
+          <span className="inline-block text-[#ADADAD] 2xl:text-lg text-sm">
             Выберите понравившийся товар <br />и оформите заказ за несколько
             простых шагов.
           </span>
-          <p className="text-[#E9E9E9] font-bold text-xl mt-[40px] ml-6">
+          <p className="text-[#E9E9E9] font-bold 2xl:text-xl pt-9 pl-6 text-lg">
             ОЖИДАНИЕ ЗВОНКА
           </p>
-          <span className="inline-block text-[#ADADAD] text-lg ml-6">
+          <span className="inline-block text-[#ADADAD] 2xl:text-lg ml-6 text-sm">
             После оформления заказа,
             <br /> с Вами свяжется оператор
           </span>
-          <p className="text-[#E9E9E9] font-bold text-xl mt-[35px]">
+          <p className="text-[#E9E9E9] font-bold 2xl:text-xl pt-9 text-lg ">
             ЗАКАЗ УЖЕ В ПУТИ
           </p>
-          <span className="inline-block text-[#ADADAD] text-lg">
+          <span className="inline-block text-[#ADADAD] 2xl:text-lg text-sm">
             Когда мы утвердили заказ, мы <br />
             готовим и отправляем Вам заказ
           </span>
