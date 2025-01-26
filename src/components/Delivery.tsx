@@ -2,7 +2,7 @@ import { SlArrowDown } from "react-icons/sl";
 
 const Delivery = () => {
   return (
-    <section className="lg:pt-24 pt-10">
+    <section className="lg:pt-28 pt-10">
       <div className="grid xl:grid-cols-3 lg:grid-cols-2   container  items-center">
         <div className="">
           <h2 className="text-[#F5920B] font-bold text-xl sm:text-3xl lg:text-5xl ">

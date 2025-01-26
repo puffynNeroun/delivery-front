@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className=" pt-8 lg:pt-12 ">
+    <footer className=" pt-8 lg:pt-28 ">
       <div className="grid grid-cols-2 container">
         <div className="flex flex-col ">
           <a>
