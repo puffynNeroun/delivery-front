@@ -1,27 +1,29 @@
 const CartItem = () => {
   return (
-    <div className="w-[355px] h-[445px] bg-[#F5920B]">
+    <div className="flex flex-col ">
       <div>
         <img
-          src="../../public/roll.jpg"
+          src="../../public/example.jpeg"
           alt="image_roll"
-          className="h-auto w-full max-w-full"
+          className=" w-full"
         />
       </div>
-      <div className="mt-[15px] ml-[23px] w-[216px]">
-        <p className="text-[#171717] font-bold text-xl ">
-          Филадельфия лайт кунсей
-        </p>
-        <span className="text-[#242424] text-sm mt-2">Рис: белый</span> <br />
-        <span className="text-[#242424] text-sm ">
-          Начинка: Ролл с копченным лососем-сыром и томатом
-        </span>
-      </div>
-      <div className="flex justify-between mx-6 items-center mt-[14px]">
-        <span>559 &#8381;</span>
-        <button className="text-[#E9E9E9] px-[35px] py-[13px] bg-black rounded-3xl hover:-translate-y-2 transition-transform">
-          В корзину
-        </button>
+      <div className=" bg-[#F5920B] lg:py-3 lg:px-6 py-1 px-3 ">
+        <div className="flex flex-col">
+          <p className="text-[#171717] font-bold lg:text-xl ">Урра терияки</p>
+          <p className="text-[#242424] lg:text-sm mt-2 text-xs">
+            Ролл в блине , сыр творожный, жаренный лосось, салат
+          </p>
+        </div>
+        <div className="flex mt-4 lg:mt-8 items-center gap-2">
+          <span className="font-bold">490 ₽</span>
+          <span className="font-bold lg:text-xl text-lg">350 ₽</span>
+        </div>
+        <div className="flex justify-center mt-5">
+          <button className="  text-[#E9E9E9] py-2 px-3 lg:px-6 lg:py-5 bg-black  hover:-translate-y-2 transition-transform ">
+            Подробное описание
+          </button>
+        </div>
       </div>
     </div>
   );

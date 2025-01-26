@@ -1,19 +1,20 @@
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <header className="text-[#E9E9E9]">
-      <div className="container pt-5 md:pt-11 flex justify-between items-center">
+      <div className="container py-5 md:pt-11 flex justify-between items-center">
         <a>
           <img
             src="../../public/logo2.svg"
             alt="logo"
-            className="inline-block max-w-32 md:max-w-56 max-h-14"
+            className="inline-block max-w-32 xl:max-w-56 max-h-14"
           />
         </a>
-        <ul className="gap-2 font-bold text-lg md:flex hidden sm:ml-auto lg:ml-0">
+        <ul className="lg:gap-8 font-bold text-lg md:flex hidden sm:ml-auto lg:ml-0 gap-4">
           <li>
             <a className=" hover:underline underline-offset-8 decoration-amber-600 cursor-pointer ">
               Главная
@@ -49,11 +50,13 @@ const Header = () => {
           <p className=" md:text-lg text-sm hidden lg:block">
             +7 (963) 012-14-69
           </p>
-          <img
-            src="../../public/busket.svg"
-            alt="busket"
-            className="p-2 bg-amber-600 rounded-full hover:bg-amber-700 transition-all cursor-pointer hidden lg:block"
-          />
+          <Link to="/basket">
+            <img
+              src="../../public/busket.svg"
+              alt="busket"
+              className="p-2 bg-amber-600 rounded-full hover:bg-amber-700 transition-all cursor-pointer hidden lg:block"
+            />
+          </Link>
         </div>
         <RxHamburgerMenu
           className="text-3xl cursor-pointer md:hidden"
