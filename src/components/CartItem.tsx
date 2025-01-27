@@ -24,7 +24,9 @@ const CartItem = () => {
             </p>
           </div>
           <div className="flex mt-4 lg:mt-8 items-center gap-2">
-            <span className="font-bold">490 ₽</span>
+            {/* Прошлая цена: перечеркнутая и серая */}
+            <span className="font-bold text-gray-500 line-through">490 ₽</span>
+            {/* Текущая цена */}
             <span className="font-bold lg:text-xl text-lg">350 ₽</span>
           </div>
           <div className="flex justify-center mt-5">
