@@ -67,9 +67,7 @@ const Popular = () => {
         </div>
 
         <div className="grid lg:grid-cols-4 lg:gap-9 lg:py-9 md:grid-cols-3 gap-4 py-4 grid-cols-1 sm:grid-cols-2">
-          <Link to="/more">
             <CartItem />
-          </Link>
 
           <div className="hidden sm:block">
             <CartItem />

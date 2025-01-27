@@ -32,11 +32,7 @@ const MoreAbout = () => {
           </div>
         </div>
       </div>
-      <img
-        src="../../public/close.svg"
-        alt=""
-        className="absolute xl:top-10 xl:right-16 top-5 right-8 xl:w-24 w-16"
-      />
+
     </div>
   );
 };

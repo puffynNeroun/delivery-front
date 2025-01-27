@@ -6,7 +6,7 @@ const Discounts = () => {
           <div className="lg:flex justify-center ">
             <img src="../../public/exempl2.jpeg" alt="" />
           </div>
-          <div className="flex flex-col lg:items-end items-center">
+          <div className="flex flex-col items-end pt-5">
             <p className=" text-[#FFFFFF] xl:text-lg text-xs">
               Lorem 20% dolor sit amet, consectetur adips.
             </p>
