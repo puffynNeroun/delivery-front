@@ -6,21 +6,21 @@ const Discounts = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-      <section className="mt-10 lg:mt-28 bg-[#F5920B]" ref={ref}>
+      <section className="mt-10 lg:mt-28 bg-[#F5920B] overflow-hidden" ref={ref}>
         <div className="container lg:pt-24 lg:pb-16 pt-12 pb-8">
           <div className="grid lg:grid-cols-2 gap-15 grid-cols-1">
             <motion.div
                 className="lg:flex justify-center"
-                initial={{ opacity: 0, x: -100 }}
+                initial={{ opacity: 0, x: -50 }} // Уменьшил x
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 1 }}
             >
-              <img src="../../public/exempl2.jpeg" alt="Discount" />
+              <img src="../../public/exempl2.jpeg" alt="Discount" className="max-w-full" />
             </motion.div>
 
             <motion.div
                 className="flex flex-col items-end pt-5"
-                initial={{ opacity: 0, x: 100 }}
+                initial={{ opacity: 0, x: 50 }} // Уменьшил x
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 1 }}
             >

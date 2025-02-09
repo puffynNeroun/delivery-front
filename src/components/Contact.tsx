@@ -6,11 +6,11 @@ const Contact = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-      <section className="pt-8 lg:pt-28" ref={ref}>
+      <section className="pt-8 lg:pt-28 overflow-hidden" ref={ref}>
         <div className="grid lg:grid-cols-2 container grid-cols-1">
           <motion.div
               className="flex flex-col order-2 lg:order-1"
-              initial={{ opacity: 0, x: -100 }}
+              initial={{ opacity: 0, x: -50 }} // Уменьшил сдвиг
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 1 }}
           >
@@ -57,12 +57,12 @@ const Contact = () => {
           </motion.div>
 
           <motion.div
-              className="lg:flex order-1 lg:order-2 mb-6 lg:mb-0"
+              className="lg:flex order-1 lg:order-2 mb-6 lg:mb-0 max-w-full overflow-hidden"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 1 }}
           >
-            <img src="../../public/map.jpeg" alt="Map" />
+            <img src="../../public/map.jpeg" alt="Map" className="max-w-full" />
           </motion.div>
         </div>
       </section>
