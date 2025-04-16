@@ -3,9 +3,10 @@ import { useQuery } from "@tanstack/react-query";
 import { getProducts } from "../services/product";
 import { Product } from "../types/Product";
 
-export const useProducts = () => {
+export const useProducts = (category: string) => {
     return useQuery<Product[]>({
-        queryKey: ["products"],
-        queryFn: getProducts,
+        queryKey: ["products", category],
+        queryFn: () => getProducts(category),
     });
 };
+

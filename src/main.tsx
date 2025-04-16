@@ -8,7 +8,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Catalog from './pages/Catalog';
-import MoreAbout from './components/MoreAbout';
 import BasketList from './pages/BasketList';
 import LoginForm from './components/LoginForm';
 import RegisterForm from './components/RegisterForm';
@@ -22,7 +21,6 @@ const router = createBrowserRouter([
         children: [
             { index: true, element: <Home /> },
             { path: 'catalog', element: <Catalog /> },
-            { path: 'more', element: <MoreAbout /> },
             { path: 'basket', element: <BasketList /> },
             { path: 'login', element: <LoginForm /> },
             { path: 'register', element: <RegisterForm /> },

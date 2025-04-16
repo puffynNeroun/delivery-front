@@ -5,10 +5,12 @@ import { Product } from "../types/Product";
  * Получить список всех продуктов
  * GET /api/products
  */
-export const getProducts = async (): Promise<Product[]> => {
-    const response = await axiosInstance.get("/products");
+export const getProducts = async (category?: string): Promise<Product[]> => {
+    const query = category && category !== 'Все' ? `?category=${encodeURIComponent(category)}` : '';
+    const response = await axiosInstance.get(`/products${query}`);
     return response.data;
 };
+
 
 /**
  * Получить один продукт по ID
