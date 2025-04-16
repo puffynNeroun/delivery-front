@@ -1,10 +1,13 @@
-import { configureStore } from "@reduxjs/toolkit";
-import cartSlice from "./slices/cartSlice";
+import { configureStore } from '@reduxjs/toolkit';
+import authReducer from './slices/authSlice';
+import cartReducer from './slices/cartSlice';
 
 export const store = configureStore({
   reducer: {
-    cart: cartSlice,
+    auth: authReducer,
+    cart: cartReducer,
   },
+  devTools: import.meta.env.MODE !== 'production',
 });
 
 export type RootState = ReturnType<typeof store.getState>;
