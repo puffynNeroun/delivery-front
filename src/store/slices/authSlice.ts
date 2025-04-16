@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import { getMe, login, register, LoginDto, RegisterDto, User } from '@/services/auth';
+import { getMe, login, register, LoginDto, RegisterDto, User } from '../../services/auth';
 import { RootState } from '../store';
 
 interface AuthState {
@@ -22,8 +22,11 @@ export const loginUser = createAsyncThunk(
     async (data: LoginDto, thunkAPI) => {
         try {
             return await login(data);
-        } catch (error: any) {
-            return thunkAPI.rejectWithValue(error.response?.data?.message || 'Ошибка входа');
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                return thunkAPI.rejectWithValue(error.message);
+            }
+            return thunkAPI.rejectWithValue('Ошибка входа');
         }
     }
 );
@@ -34,20 +37,30 @@ export const registerUser = createAsyncThunk(
     async (data: RegisterDto, thunkAPI) => {
         try {
             return await register(data);
-        } catch (error: any) {
-            return thunkAPI.rejectWithValue(error.response?.data?.message || 'Ошибка регистрации');
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                return thunkAPI.rejectWithValue(error.message);
+            }
+            return thunkAPI.rejectWithValue('Ошибка регистрации');
         }
     }
 );
 
 // 🔹 Получение текущего пользователя
-export const fetchMe = createAsyncThunk('auth/me', async (_, thunkAPI) => {
-    try {
-        return await getMe();
-    } catch (error: any) {
-        return thunkAPI.rejectWithValue('Не удалось получить данные пользователя');
+export const fetchMe = createAsyncThunk(
+    'auth/me',
+    async (_, thunkAPI) => {
+        try {
+            return await getMe();
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                return thunkAPI.rejectWithValue(error.message);
+            }
+            return thunkAPI.rejectWithValue('Не удалось получить данные пользователя');
+        }
+
     }
-});
+);
 
 const authSlice = createSlice({
     name: 'auth',

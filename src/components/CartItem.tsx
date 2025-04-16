@@ -1,9 +1,13 @@
 import { useState } from "react";
 import MoreAbout from "./MoreAbout";
+import { Product } from "../types/Product";
 
-const CartItem = () => {
+interface Props {
+  product: Product;
+}
+
+const CartItem = ({ product }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
 
@@ -11,23 +15,22 @@ const CartItem = () => {
       <div className="flex flex-col">
         <div>
           <img
-              src="../../public/example.jpeg"
-              alt="image_roll"
-              className="w-full"
+              src={product.image}
+              alt={product.name}
+              className="w-full h-56 object-cover"
           />
         </div>
         <div className="bg-[#F5920B] lg:py-3 lg:px-6 py-1 px-3">
           <div className="flex flex-col">
-            <p className="text-[#171717] font-bold lg:text-xl">Урра терияки</p>
+            <p className="text-[#171717] font-bold lg:text-xl">{product.name}</p>
             <p className="text-[#242424] lg:text-sm mt-2 text-xs">
-              Ролл в блине, сыр творожный, жаренный лосось, салат
+              {product.description}
             </p>
           </div>
           <div className="flex mt-4 lg:mt-8 items-center gap-2">
-            {/* Прошлая цена: перечеркнутая и серая */}
-            <span className="font-bold text-gray-500 line-through">490 ₽</span>
-            {/* Текущая цена */}
-            <span className="font-bold lg:text-xl text-lg">350 ₽</span>
+            {/* Старую цену можно убрать или заменить логикой акций */}
+            <span className="font-bold text-gray-500 line-through">{Math.round(product.price * 1.2)} ₽</span>
+            <span className="font-bold lg:text-xl text-lg">{product.price} ₽</span>
           </div>
           <div className="flex justify-center mt-5">
             <button
@@ -48,7 +51,7 @@ const CartItem = () => {
                 >
                   ✕
                 </button>
-                <MoreAbout />
+                <MoreAbout product={product} />
               </div>
             </div>
         )}
