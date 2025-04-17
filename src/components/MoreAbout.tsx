@@ -1,38 +1,48 @@
 import { Product } from "../types/Product";
+import { ShoppingCart } from "lucide-react";
 
 interface Props {
   product: Product;
+  onAddToCart: () => void;
 }
 
-const MoreAbout = ({ product }: Props) => {
+const MoreAbout = ({ product, onAddToCart }: Props) => {
   return (
-      <div className="container max-w-7xl xl:p-12 bg-[#0C0C0C] relative p-8">
-        <div className="flex-row sm:flex gap-6 xl:gap-12">
-          <div className="flex-grow">
-            <img src={product.image} alt={product.name} className="w-full h-auto" />
+      <div className="max-w-5xl w-full bg-[#0C0C0C] rounded-2xl overflow-hidden shadow-2xl p-6 sm:p-10 lg:p-14">
+        <div className="flex flex-col lg:flex-row gap-10">
+          <div className="flex-shrink-0 w-full lg:w-1/2">
+            <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-full object-cover rounded-xl shadow-lg"
+            />
           </div>
-          <div className="flex flex-col">
-            <h2 className="text-[#E9E9E9] font-bold xl:text-4xl mb-6 lg:mb-11 lg:text-2xl">
-              {product.name}
-            </h2>
-            <p className="text-[#E9E9E9] font-bold text-2xl xl:text-4xl xl:mb-6 mb-3">
-              Цена:
-            </p>
-            <p className="text-[#E9E9E9] font-bold text-2xl xl:text-4xl xl:mb-6 mb-3">
-              {product.price} ₽
-            </p>
-            <p className="text-[#BEBEBE] text-sm xl:text-lg">
-              {product.description}
-            </p>
 
-            <div className="flex flex-col justify-center items-center mt-auto">
-              <img
-                  src="../../public/busket.svg"
-                  alt="busket"
-                  className="lg:p-8 bg-amber-600 rounded-full hover:bg-amber-700 transition-all cursor-pointer lg:w-24 lg:h-24 mb-4 w-14 h-14 p-4"
-              />
-              <button className="text-[#E9E9E9] font-bold text-xs md:text-xs xl:text-xl border border-[#F5920B] lg:py-8 px-10 w-full py-4">
-                Оформить заказ
+          <div className="flex flex-col justify-between w-full text-[#E9E9E9]">
+            <div>
+              <h2 className="text-2xl xl:text-4xl font-bold mb-4">
+                {product.name}
+              </h2>
+              <p className="text-sm xl:text-lg text-[#BEBEBE] mb-6 leading-relaxed">
+                {product.description}
+              </p>
+              <div className="flex items-center gap-4 mb-6">
+              <span className="text-gray-500 font-semibold line-through text-sm">
+                {Math.round(product.price * 1.2)} ₽
+              </span>
+                <span className="text-3xl text-[#F5920B] font-extrabold">
+                {product.price} ₽
+              </span>
+              </div>
+            </div>
+
+            <div className="flex justify-end">
+              <button
+                  onClick={onAddToCart}
+                  className="flex items-center gap-2 bg-[#F5920B] hover:bg-[#e58600] text-[#0C0C0C] font-bold text-lg py-3 px-6 rounded-full transition-all shadow-md"
+              >
+                <ShoppingCart className="w-5 h-5" />
+                Добавить в корзину
               </button>
             </div>
           </div>

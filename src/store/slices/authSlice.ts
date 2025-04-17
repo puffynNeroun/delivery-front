@@ -1,6 +1,7 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { getMe, login, register, LoginDto, RegisterDto, User } from '../../services/auth';
-import { RootState } from '../store';
+import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
+import {getMe, login, register, LoginDto, RegisterDto, User} from '../../services/auth';
+import {RootState} from '../store';
+import {axiosInstance} from "../../services/axios.ts";
 
 interface AuthState {
     user: User | null;
@@ -61,16 +62,23 @@ export const fetchMe = createAsyncThunk(
     }
 );
 
+export const logoutUser = createAsyncThunk("auth/logout", async (_, thunkAPI) => {
+    try {
+        await axiosInstance.post("/auth/logout"); // 🧠 Вызов сервера
+        return;
+    } catch (error: unknown) {
+        if (error instanceof Error) {
+            return thunkAPI.rejectWithValue(error.message);
+        }
+        return thunkAPI.rejectWithValue('Не удалось получить данные пользователя');
+    }
+});
+
+
 const authSlice = createSlice({
     name: 'auth',
     initialState,
-    reducers: {
-        logoutUser: (state) => {
-            state.user = null;
-        },
-
-
-    },
+    reducers: {},
     extraReducers: (builder) => {
         builder
             .addCase(loginUser.pending, (state) => {
@@ -110,11 +118,14 @@ const authSlice = createSlice({
                 state.loading = false;
                 state.error = action.payload as string;
                 state.isInitialized = true;
-            });
+            })
+            .addCase(logoutUser.fulfilled, (state) => {
+                state.user = null;
+                state.isInitialized = true;
+            })
     },
 });
 
-export const { logoutUser } = authSlice.actions;
 
 export const selectCurrentUser = (state: RootState) => state.auth.user;
 export const selectIsAuth = (state: RootState) => Boolean(state.auth.user);

@@ -11,6 +11,11 @@ export const getProducts = async (category?: string): Promise<Product[]> => {
     return response.data;
 };
 
+export const getPopularProducts = async (): Promise<Product[]> => {
+    const res = await axiosInstance.get('/products/popular');
+    return res.data;
+};
+
 
 /**
  * Получить один продукт по ID

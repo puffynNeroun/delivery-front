@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import MapComponent from "./MapComponent.tsx";
 
 const Contact = () => {
   const ref = useRef(null);
@@ -58,11 +59,13 @@ const Contact = () => {
 
           <motion.div
               className="lg:flex order-1 lg:order-2 mb-6 lg:mb-0 max-w-full overflow-hidden"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 1 }}
+              initial={{opacity: 0, scale: 0.8}}
+              animate={isInView ? {opacity: 1, scale: 1} : {}}
+              transition={{duration: 1}}
           >
-            <img src="../../public/map.jpeg" alt="Map" className="max-w-full" />
+            <div className="w-full h-[400px] lg:h-full">
+              <MapComponent/>
+            </div>
           </motion.div>
         </div>
       </section>
